@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include<iomanip>
 #include "Person.h"
 #include "Doctor.h" 
 #include "SoftwareEngineer.h" 
@@ -54,29 +56,51 @@ int main(){
                 // string gender, string name, int age, string specialization, string role,
                 // string company, string salary, string level
                 SoftwareEngineer WebDeveloper =  SoftwareEngineer("female", "Maya Kricko", 27, "Web DevelopMent","Front-End Engineer", "Google", "$658,962", "L7", 10);
-                WebDeveloper.getinfo();
-                WebDeveloper.Value();
+                // WebDeveloper.getinfo();
+                // WebDeveloper.Value();
 
                 
-                P MobileDeveloper = SoftwareEngineer();
-                ((SoftwareEngineer) MobileDeveloper).setFeatures("male", "Cristiano Ronaldo", 32, "Apple IOS", "Mobile Developer", "Apple", "$258,962", "ICT 3", 5);
-                ((SoftwareEngineer) MobileDeveloper).Bio();
-                ((SoftwareEngineer) MobileDeveloper).getinfo();
-                ((SoftwareEngineer) MobileDeveloper).Value();
+                SoftwareEngineer MobileDeveloper = SoftwareEngineer();
+                MobileDeveloper.setFeatures("male", "Cristiano Ronaldo", 32, "Apple IOS", "Mobile Developer", "Apple", "$258,962", "ICT 3", 5);
+                // MobileDeveloper.Bio();
+                // MobileDeveloper.getinfo();
+                // MobileDeveloper.Value();
                 // Person MobileDeveloper = SoftwareEngineer();
                 // ((SoftwareEngineer) MobileDeveloper).setFeatures("male", "Cristiano Ronaldo", 32, "Apple IOS", "Mobile Developer", "Apple", "$258,962", "ICT 3", 5);
                 // ((SoftwareEngineer) MobileDeveloper).Bio();
                 // ((SoftwareEngineer) MobileDeveloper).getinfo();
                 // ((SoftwareEngineer) MobileDeveloper).Value();*/
                 SoftwareEngineer CloudEngineer =  SoftwareEngineer("male", "Mike Ross", 45, "Azure Cloud","Cloud Architect", "Microsoft", "$872,650", "Partner", 15);
-                CloudEngineer.getinfo();
+                // CloudEngineer.getinfo();
 
                 SoftwareEngineer TestingEngineer =  SoftwareEngineer("female", "Jasmine Neutron", 37, "Software Testing","QA Engineer", "Facebook", "$396,802", "E5", 7);
-                TestingEngineer.getinfo();
+                // TestingEngineer.getinfo();
 
                 SoftwareEngineer AutomationEngineer =  SoftwareEngineer("male", "Jake Sully", 29, "AWS Cloud","DevOps Engineer", "Netflix", "$506,788", "Senior Software Engineer", 10);
-                AutomationEngineer.getinfo();
-                AutomationEngineer.testingsuper();
+                // AutomationEngineer.getinfo();
+                // AutomationEngineer.testingsuper();
+                
+                // Using A vector to Manipulate all created Objects
+                vector<SoftwareEngineer> SWE = vector<SoftwareEngineer>();
+                SWE.push_back(WebDeveloper);
+                SWE.push_back(MobileDeveloper);
+                SWE.push_back(CloudEngineer);
+                SWE.push_back(TestingEngineer);
+                SWE.push_back(AutomationEngineer);
+                int count = 0;
+                string tab = "\t";
+                for(SoftwareEngineer item : SWE) {
+                    count++;
+                    cout << "\n" << setw(10) << " Engineer " << count;
+                    item.Bio();
+                    item.getinfo();
+                    if(count == 1 || count == 2) {
+                        item.Value();
+                    }
+                    if(count == 5){
+                        item.testingsuper();
+                    }
+                }
 
     return 0;
 }
