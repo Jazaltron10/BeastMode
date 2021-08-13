@@ -41,7 +41,7 @@ class Person {
     
     // A method to introduce the person
     void introduction() {
-        cout << "\nHello there friends, my name is " << name << " I am " << age << " years old\n\n";
+        cout << "\nHello there friends, my name is " << name << " I am " << age << " years old\n";
     }
     // A Method to change the name and age features of a person object
     void setFeatures(string newName, int newAge) {

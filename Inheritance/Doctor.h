@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <cctype>
 #include "Person.h"
 #define nline = "\n";
 class Doctor: public Person{
@@ -20,8 +19,10 @@ class Doctor: public Person{
     // The 2nd Constructor
     Doctor(string Ogender, string Oname, int Oage, string DmedicalField, string Demployer, string Dqualification,
             string Dresidency, int DYearsOfExperience):Person(Oname, Oage){
-        
-        gender = Ogender;// protected variable from superclass
+        // calling the second constructor in the superclass
+        // protected variable from superclass
+        gender = Ogender;
+        // private variables in the subclass
         YearsOfExperience = DYearsOfExperience;
         medicalField = DmedicalField;
         employer = Demployer;
@@ -39,12 +40,12 @@ class Doctor: public Person{
         } else {
             cout << "\nDr " << name << " is one of the top medical doctors in the country, specializing in the field of " << medicalField << 
             "\nDr " << name << " has over " << YearsOfExperience << " years of experience in this field and has won several awards as well as met and exceeded several qualifications including " << qualification << "\nDr " << name << " is " << age << " years old with no plans on retiring anytime soon. The " << employer << " he works for are eager to extend Dr " << name << "'s contract for the for seeable future" << 
-            "\nHe has participated and contributed to a lot of groundbreaking research in the field of " << medicalField;
+            "\nHe has participated and contributed to a lot of groundbreaking research in the field of " << medicalField << endl;
         }
     }
     //A getter method that displays the general infor of a Doctor 
     void getinfo() {
-        cout << "\nThis is the Company Info For Doctor "<< name << "\nName:-> " << name << "\nAge:-> " << age<< "\nMedical Field:-> " << medicalField << "\nEmployer:-> " << employer << "\nQualification:->"<< qualification << "\nResidency :-> " << residency << "\nYears Of Experience:-> " << YearsOfExperience << "\n";
+        cout << "\n\nThis is the "<<employer<< " Info For Doctor "<< name << "\nName:-> " << name << "\nAge:-> " << age<< "\nMedical Field:-> " << medicalField << "\nEmployer:-> " << employer << "\nQualification:->"<< qualification << "\nResidency :-> " << residency << "\nYears Of Experience:-> " << YearsOfExperience << "\n";
     }
 
     void giveDiagnosis() {
