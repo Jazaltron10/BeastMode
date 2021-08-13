@@ -21,14 +21,14 @@ class SoftwareEngineer : public Person {
         cout<<"\nMy name is " << Oname << " and I am a SoftwareEngineer";
     }
 
-    // // The 2nd Constructor
-    // SoftwareEngineer() {
-    //     // this is me using the this keyword in a constructor
-    //     // This constructor just uses the this keyword to call the 3rd constructor
-    //     // and if an object is created with this constructor it will have the default
-    //     // data below
-    //     this("male", "John Doe", 25, "Web", "Front-End Engineer", "IBM", "$100,000", "L5", 5);
-    // }
+    // The 2nd Constructor
+    SoftwareEngineer(): SoftwareEngineer("male", "John Doe", 25, "Web", "Front-End Engineer", "IBM", "$100,000", "L5", 5) {
+        // this is me using the this keyword in a constructor
+        // This constructor just uses the this keyword to call the 3rd constructor
+        // and if an object is created with this constructor it will have the default
+        // data below
+        // this();
+    }
 
     // The 3rd Constructor
     SoftwareEngineer(string Ogender, string Oname, int Oage, string Ospecialization, string Orole, string Ocompany,
