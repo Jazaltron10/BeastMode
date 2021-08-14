@@ -6,6 +6,7 @@ int nQuestions = 0;
 int nCorrect = 0;
 int nAttempts = 0;
 
+//Function Prototypes
 string Ask(string);
 void Check(string, string);
 
