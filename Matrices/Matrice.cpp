@@ -11,9 +11,10 @@ void dMatrix1(){
         int matrix[3][4] = {{6, -5, 1, 3},{2, -4, 8, 3},{4, -7, -6, 5}};
         for (int row = 0; row < 3; row++){// for each row
             for (int column = 0; column < 4; column++){// for each column in the row
-                std::cout << matrix[row][column] << std::endl;
+                std::cout << "Element at matrix[" << row << "][" << column << "]: "<< matrix[row][column] << "\t" << std::endl; 
             }
         }
+                std::cout << std::endl << std::endl;     
 }
         /*
          * A1.length = number of rows of first matrix 
@@ -31,7 +32,7 @@ void AddMatrix(){
     for(row = 0; row < 3; row++){
         for(col = 0; col < 3; col++){
             newMatrix[row][col] = A1[row][col] + A2[row][col];
-            std::cout << newMatrix[row][col] << "\t" ;
+            std::cout << "Element at newMatrix[" << row << "][" << col << "]: "<< newMatrix[row][col] << "\t" << std::endl;      
         }
     }
 }
