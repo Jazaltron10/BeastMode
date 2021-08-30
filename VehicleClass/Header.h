@@ -7,7 +7,7 @@ using namespace std;
 
 class Vehicle{
     private:
-    string Name, Model, Color, Type, Year, Hp, Speed,Torque, Price;
+    string Name, Model, Color, Type, Year, Hp, Speed, Torque, Price;
     
     public:
         // First constructor Using some of the instance state and an instance method
